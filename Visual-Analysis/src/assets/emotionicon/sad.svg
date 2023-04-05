@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='ASCII' standalone='yes'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="800" version="1.1" width="550">
+  <defs/>
+  <svg id="female1.9" viewBox="0 0 800 800">
+    <defs>
+      <style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:4px;}</style>
+    </defs>
+    <title>brow9</title>
+    <g id="brow">
+      <g id="eyebrow">
+        <path class="cls-1" d="M340.34,345.08s-15,13.91-25.58,19c-11.19,5.42-22.89,11.37-36.05,11.72-8.82.23-24.36-4.91-24.36-4.91"/>
+        <path class="cls-1" d="M340.22,344.57s-15.89,5.35-22.37,9.88-12.53,9.56-20.09,13c-13.32,6-43.41,3.51-43.41,3.51"/>
+      </g>
+      <g id="eyebrow-2" data-name="eyebrow">
+        <path class="cls-1" d="M442.92,345.08s15,13.91,25.58,19c11.19,5.42,22.89,11.37,36.06,11.72,8.81.23,24.35-4.91,24.35-4.91"/>
+        <path class="cls-1" d="M443.05,344.57s15.88,5.35,22.36,9.88,12.54,9.56,20.09,13c13.32,6,43.41,3.51,43.41,3.51"/>
+      </g>
+    </g>
+  </svg>
+  <svg version="1.1" id="female1.18" x="0px" y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<title>nose18</title>
+<path id="nose" class="st0" d="M394.7,503.8l-6.4,11.3c-1.1,1.9-1,4.2,0.2,6c2.9,4.3,9.9,10,20.4,14.2"/>
+</svg>
+  <svg version="1.1" id="male-eye&#37835;&#20346;&#30045;3" x="0px" y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<title>eye03</title>
+<path class="st0" d="M277.9,427.4c0,0,28.2-42.5,62.8-0.1"/>
+<path class="st0" d="M505.6,429.4c0,0-27.5-41.5-61.6-1.5"/>
+<path class="st1" d="M472.8,441.9c0.3-0.4,0.8-0.7,1.3-0.8c1.4-0.5,2.7,0.9,2.9,2.2c0.1,0.6,0,1.2-0.3,1.7c-0.7,1.1-2.5,1.2-3.5,0.6  c-0.5-0.3-0.9-0.8-1-1.4C471.9,443.4,472.2,442.6,472.8,441.9z"/>
+<path class="st1" d="M471,440.4c0.7-0.8,1.6-1.4,2.5-1.7c2.8-0.9,5.4,1.8,5.8,4.4c0.2,1.2,0,2.5-0.6,3.4c-1.5,2.1-5,2.4-7.1,1.1  c-1-0.6-1.8-1.6-2-2.7C469.3,443.3,469.9,441.6,471,440.4z"/>
+<path class="st1" d="M469.4,438.9c1-1.1,2.3-2,3.7-2.4c4.1-1.3,7.8,2.7,8.5,6.5c0.3,1.7,0.1,3.6-0.9,5c-2.2,3.1-7.2,3.5-10.3,1.6  c-1.4-0.9-2.6-2.3-2.9-3.9C466.9,443.2,467.8,440.7,469.4,438.9z"/>
+<path class="st1" d="M466.5,436.4c1.5-1.6,3.4-2.9,5.5-3.6c6.1-1.9,11.5,4,12.5,9.6c0.4,2.5,0.1,5.3-1.4,7.4  c-3.2,4.6-10.7,5.2-15.2,2.4c-2.1-1.3-3.8-3.4-4.3-5.8C462.7,442.7,464,439.1,466.5,436.4z"/>
+<path class="st1" d="M308.5,440.3c0.3-0.4,0.8-0.7,1.3-0.8c1.4-0.5,2.7,0.9,2.9,2.2c0.1,0.6,0,1.2-0.3,1.7c-0.7,1.1-2.5,1.2-3.5,0.6  c-0.5-0.3-0.9-0.8-1-1.4C307.6,441.8,307.9,441,308.5,440.3z"/>
+<path class="st1" d="M306.7,438.8c0.7-0.8,1.6-1.4,2.5-1.7c2.8-0.9,5.4,1.8,5.8,4.4c0.2,1.2,0,2.5-0.6,3.4c-1.5,2.1-5,2.4-7.1,1.1  c-1-0.6-1.8-1.6-2-2.7C305,441.7,305.6,440,306.7,438.8z"/>
+<path class="st1" d="M305.1,437.3c1-1.1,2.3-2,3.7-2.4c4.1-1.3,7.8,2.7,8.5,6.5c0.3,1.7,0.1,3.6-0.9,5c-2.2,3.1-7.2,3.5-10.3,1.6  c-1.4-0.9-2.6-2.3-2.9-3.9C302.6,441.6,303.5,439.1,305.1,437.3z"/>
+<path class="st1" d="M302.2,434.8c1.5-1.6,3.4-2.9,5.5-3.6c6.1-1.9,11.5,4,12.5,9.6c0.4,2.5,0.1,5.3-1.4,7.4  c-3.2,4.6-10.7,5.2-15.2,2.4c-2.1-1.3-3.8-3.4-4.3-5.8C298.4,441.1,299.7,437.5,302.2,434.8z"/>
+<path class="st2" d="M283.2,420c0,0-7.4,3-11.5-6"/>
+<path class="st2" d="M279.9,423.9c0,0-6.3,4.9-12.7-2.7"/>
+<path class="st2" d="M501.4,422.7c0,0,7.4,3,11.5-6"/>
+<path class="st2" d="M504.7,426.7c0,0,6.3,4.9,12.7-2.7"/>
+<path class="st1" d="M485.3,452.6c0.7-0.8,1.6-1.4,2.5-1.7c2.8-0.9,5.4,1.8,5.8,4.4c0.2,1.2,0,2.5-0.6,3.4c-1.5,2.1-5,2.4-7.1,1.1  c-1-0.6-1.8-1.6-2-2.7C483.6,455.5,484.2,453.8,485.3,452.6z"/>
+<path class="st1" d="M295.6,454.2c0.7-0.8,1.6-1.4,2.5-1.7c2.8-0.9,5.4,1.8,5.8,4.4c0.2,1.2,0,2.5-0.6,3.4c-1.5,2.1-5,2.4-7.1,1.1  c-1-0.6-1.8-1.6-2-2.7C293.9,457.1,294.5,455.4,295.6,454.2z"/>
+</svg>
+  <svg version="1.1" id="female1.7" x="0px" y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<title>mouth7</title>
+<g id="mouth">
+	<path class="st0" d="M442.5,580.4c-18-8.4-77.4-5.2-98.8-2.8"/>
+	<path class="st0" d="M353.7,573.3c10.7-9.7,24.6-16.5,39.2-16.9c16.9-0.5,42.4,19,42.4,19"/>
+</g>
+</svg>
+</svg>

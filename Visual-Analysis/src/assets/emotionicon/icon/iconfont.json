@@ -1,0 +1,72 @@
+{
+  "id": "2943855",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "755612",
+      "name": "圆形",
+      "font_class": "circle",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "5896814",
+      "name": "地图-圆",
+      "font_class": "ditu-yuan",
+      "unicode": "ec44",
+      "unicode_decimal": 60484
+    },
+    {
+      "icon_id": "1250665",
+      "name": "圆",
+      "font_class": "yuan",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "1327",
+      "name": "录音",
+      "font_class": "luyin",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "18175743",
+      "name": "圆形",
+      "font_class": "radio-off-full",
+      "unicode": "ea6b",
+      "unicode_decimal": 60011
+    },
+    {
+      "icon_id": "755610",
+      "name": "圆角矩形",
+      "font_class": "yuanjiao-rect",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "11467418",
+      "name": "矩形",
+      "font_class": "juxing",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "10852838",
+      "name": "详情查看",
+      "font_class": "xiangqingchakan",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "18201313",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}

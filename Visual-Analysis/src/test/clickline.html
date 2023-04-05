@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      /* body{ background-color: #000000; }  */
+    </style>
+  </head>
+  <body>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script>
+      var width = 1800,
+        height = 670;
+      //  var dataset = [ [ { x: 0, y: 5 },{ x: 1, y: 4 },{ x: 2, y: 2 },{ x: 3, y: 2 }, { x: 4, y: 3 },{ x: 5, y: 1 },{ x: 6, y: 2 },{ x: 7, y: 2 } ],
+      //  [ { x: 0, y: 2 },{ x: 1, y: 5 },{ x: 2, y: 3 },{ x: 3, y: 3 }, { x: 4, y: 1 },{ x: 5, y: 5 },{ x: 6, y: 3 },{ x: 7, y: 2 } ],
+      //  [ { x: 0, y: 5 },{ x: 1, y: 8 },{ x: 2, y: 1 },{ x: 3, y: 4 }, { x: 4, y: 3 },{ x: 5, y: 7 },{ x: 6, y: 2 },{ x: 7, y: 6 } ] ];
+
+      var dataset = [
+        [
+          // { x: 0, y: 263 },
+          { x: 0, y: 50 },
+          { x: 1, y: 5 },
+          { x: 2, y: 11 },
+          { x: 3, y: 5 },
+          { x: 4, y: 10 },
+          { x: 5, y: 7 },
+          { x: 6, y: 11 },
+          { x: 7, y: 5 },
+          { x: 8, y: 7 },
+          { x: 9, y: 6 },
+          { x: 10, y: 3 },
+          { x: 11, y: 13 },
+          { x: 12, y: 5 },
+          { x: 13, y: 13 },
+          { x: 14, y: 12 },
+          { x: 15, y: 6 },
+          { x: 16, y: 10 },
+          { x: 17, y: 11 },
+          { x: 18, y: 12 },
+          { x: 19, y: 19 },
+          { x: 20, y: 11 },
+          { x: 21, y: 9 },
+          { x: 22, y: 14 },
+          { x: 23, y: 4 },
+          { x: 24, y: 5 },
+          { x: 25, y: 4 },
+          { x: 26, y: 3 },
+          { x: 27, y: 7 },
+          { x: 28, y: 8 },
+          { x: 29, y: 18 },
+          { x: 30, y: 7 },
+          { x: 31, y: 1 }
+        ],
+        [
+          { x: 0, y: 21 },
+          { x: 1, y: 4 },
+          { x: 2, y: 12 },
+          { x: 3, y: 5 },
+          { x: 4, y: 10 },
+          { x: 5, y: 6 },
+          { x: 6, y: 11 },
+          { x: 7, y: 5 },
+          { x: 8, y: 7 },
+          { x: 9, y: 6 },
+          { x: 10, y: 3 },
+          { x: 11, y: 13 },
+          { x: 12, y: 5 },
+          { x: 13, y: 13 },
+          { x: 14, y: 12 },
+          { x: 15, y: 6 },
+          { x: 16, y: 8 },
+          { x: 17, y: 11 },
+          { x: 18, y: 10 },
+          { x: 19, y: 19 },
+          { x: 20, y: 11 },
+          { x: 21, y: 9 },
+          { x: 22, y: 13 },
+          { x: 23, y: 5 },
+          { x: 24, y: 5 },
+          { x: 25, y: 2 },
+          { x: 26, y: 5 },
+          { x: 27, y: 7 },
+          { x: 28, y: 7 },
+          { x: 29, y: 19 },
+          { x: 30, y: 7 },
+          { x: 31, y: 183 }
+          // { x: 31, y: 183 }
+        ],
+        [
+          { x: 0, y: 12 },
+          { x: 1, y: 2 },
+          { x: 2, y: 0 },
+          { x: 3, y: 9 },
+          { x: 4, y: 4 },
+          { x: 5, y: 3 },
+          { x: 6, y: 1 },
+          { x: 7, y: 8 },
+          { x: 8, y: 3 },
+          { x: 9, y: 7 },
+          { x: 10, y: 2 },
+          { x: 11, y: 3 },
+          { x: 12, y: 5 },
+          { x: 13, y: 8 },
+          { x: 14, y: 5 },
+          { x: 15, y: 4 },
+          { x: 16, y: 2 },
+          { x: 17, y: 7 },
+          { x: 18, y: 9 },
+          { x: 19, y: 5 },
+          { x: 20, y: 14 },
+          { x: 21, y: 2 },
+          { x: 22, y: 4 },
+          { x: 23, y: 6 },
+          { x: 24, y: 4 },
+          { x: 25, y: 9 },
+          { x: 26, y: 11 },
+          { x: 27, y: 9 },
+          { x: 28, y: 8 },
+          { x: 29, y: 5 },
+          { x: 30, y: 4 },
+          { x: 31, y: 3 }
+        ],
+        [
+          { x: 0, y: 2 },
+          { x: 1, y: 3 },
+          { x: 2, y: 0 },
+          { x: 3, y: 4 },
+          { x: 4, y: 8 },
+          { x: 5, y: 7 },
+          { x: 6, y: 4 },
+          { x: 7, y: 14 },
+          { x: 8, y: 9 },
+          { x: 9, y: 13 },
+          { x: 10, y: 5 },
+          { x: 11, y: 4 },
+          { x: 12, y: 2 },
+          { x: 13, y: 9 },
+          { x: 14, y: 7 },
+          { x: 15, y: 14 },
+          { x: 16, y: 10 },
+          { x: 17, y: 22 },
+          { x: 18, y: 6 },
+          { x: 19, y: 8 },
+          { x: 20, y: 15 },
+          { x: 21, y: 4 },
+          { x: 22, y: 5 },
+          { x: 23, y: 6 },
+          { x: 24, y: 4 },
+          { x: 25, y: 5 },
+          { x: 26, y: 6 },
+          { x: 27, y: 5 },
+          { x: 28, y: 6 },
+          { x: 29, y: 14 },
+          { x: 30, y: 1 },
+          { x: 31, y: 4 }
+        ],
+        [
+          { x: 0, y: 18 },
+          { x: 1, y: 1 },
+          { x: 2, y: 0 },
+          { x: 3, y: 0 },
+          { x: 4, y: 1 },
+          { x: 5, y: 3 },
+          { x: 6, y: 12 },
+          { x: 7, y: 0 },
+          { x: 8, y: 1 },
+          { x: 9, y: 0 },
+          { x: 10, y: 0 },
+          { x: 11, y: 0 },
+          { x: 12, y: 0 },
+          { x: 13, y: 0 },
+          { x: 14, y: 0 },
+          { x: 15, y: 0 },
+          { x: 16, y: 0 },
+          { x: 17, y: 0 },
+          { x: 18, y: 0 },
+          { x: 19, y: 0 },
+          { x: 20, y: 4 },
+          { x: 21, y: 0 },
+          { x: 22, y: 0 },
+          { x: 23, y: 0 },
+          { x: 24, y: 0 },
+          { x: 25, y: 0 },
+          { x: 26, y: 0 },
+          { x: 27, y: 0 },
+          { x: 28, y: 0 },
+          { x: 29, y: 1 },
+          { x: 30, y: 0 },
+          { x: 31, y: 0 }
+        ],
+        [
+          { x: 0, y: 36 },
+          { x: 1, y: 0 },
+          { x: 2, y: 0 },
+          { x: 3, y: 4 },
+          { x: 4, y: 0 },
+          { x: 5, y: 0 },
+          { x: 6, y: 9 },
+          { x: 7, y: 0 },
+          { x: 8, y: 2 },
+          { x: 9, y: 0 },
+          { x: 10, y: 0 },
+          { x: 11, y: 0 },
+          { x: 12, y: 0 },
+          { x: 13, y: 0 },
+          { x: 14, y: 0 },
+          { x: 15, y: 0 },
+          { x: 16, y: 0 },
+          { x: 17, y: 0 },
+          { x: 18, y: 0 },
+          { x: 19, y: 0 },
+          { x: 20, y: 1 },
+          { x: 21, y: 0 },
+          { x: 22, y: 0 },
+          { x: 23, y: 0 },
+          { x: 24, y: 0 },
+          { x: 25, y: 0 },
+          { x: 26, y: 0 },
+          { x: 27, y: 0 },
+          { x: 28, y: 0 },
+          { x: 29, y: 0 },
+          { x: 30, y: 0 },
+          { x: 31, y: 0 }
+        ]
+      ];
+      var stack = d3.layout.stack()(dataset);
+      var xScale = d3.scale
+        .ordinal()
+        .domain(d3.range(dataset[0].length))
+        .rangeRoundBands([0, width / 2], 0.01);
+      var maxHeight = d3.max(dataset, function(d) {
+        return d3.max(d, function(d) {
+          return d.y0 + d.y;
+        });
+      });
+      var yScale = d3.scale
+        .linear()
+        .domain([0, maxHeight])
+        .range([0, height]);
+      var colors = d3.scale.category20();
+      var svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+      var groups = svg
+        .selectAll("g")
+        .data(dataset)
+        .enter()
+        .append("g")
+        .style("fill", function(d, i) {
+          return colors(i);
+        });
+      var area = d3.svg
+        .area()
+        .interpolate("cardinal")
+        .x(function(d, i) {
+          return xScale(i);
+        })
+        .y0(function(d) {
+          return height - yScale(d.y0 + d.y);
+        })
+        .y1(function(d) {
+          return height - yScale(d.y0);
+        });
+      groups
+        .append("path")
+        .attr("d", function(d) {
+          return area(d);
+        })
+        .style("fill", function(d, i) {
+          return colors(i);
+        });
+
+      //绘制坐标轴
+      var axisX = d3.svg.axis().scale(xScale);
+      var axisY = d3.svg
+        .axis()
+        .scale(yScale)
+        .orient("left");
+      groups
+        .append("g")
+        .call(xScale)
+        .attr("transform", "translate(0," + height + ")") //向下平移x轴
+        .style("fill", "#4682B4");
+      groups
+        .append("g")
+        .call(yScale)
+        .append("text") //y轴添加文本标签
+        .text("Price($)") //为标签设置文本内容
+        .attr("transform", "rotate(-90)") //逆时针旋转90度
+        .attr("text-anchor", "end") //文本末尾对其
+        .attr("dy", "1rem"); //沿y轴向右平移
+    </script>
+  </body>
+</html>

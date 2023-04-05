@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Page Template</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<style>
+		.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+.dot {
+  stroke: #000;
+}
+
+
+.legend {
+	            padding: 5px;
+	            font: 10px sans-serif;
+	            background: yellow;
+	            box-shadow: 2px 2px 1px #888;
+            }
+		</style>
+	</head>
+	<body>
+   <script type="text/javascript">
+   		
+   		var width = 753;
+   		var height = 500;
+   		var padding ={left:80 ,top:50,right:100,bottom:30};
+   		
+   		var svg = d3.select("body").append("svg")
+   								   .attr("width",width)
+   								   .attr("height",height);
+
+			var background = svg.append("rect")
+				.style("stroke", "black")
+				.style("stroke-width", "2px")
+				// .attr("width", width)
+				// .attr("height", height)
+				.attr("width", width-padding.left-padding.right+5)
+				.attr("height", height-padding.top+(padding.bottom-padding.top))
+				.attr("fill","none")
+				.attr("transform", function (d) {
+                return "translate(" + (padding.left-2) + "," + (padding.top-2) + ")";   //返回圆心坐标
+            })
+				;
+				//数据
+   		var dataset = [
+						{ name: "PC" , 
+						  sales: [	{ year:2005, profit: 1800 },
+									{ year:2006, profit: 1300 },
+									{ year:2007, profit: 3700 },
+									{ year:2008, profit: 4900 },
+									{ year:2009, profit: 700 },
+									{ year:2010, profit: 700 }] },
+						{ name: "SmartPhone" , 
+						  sales: [	{ year:2005, profit: 2000 },
+									{ year:2006, profit: 4000 },
+									{ year:2007, profit: 1810 },
+									{ year:2008, profit: 6540 },
+									{ year:2009, profit: 2820 },
+									{ year:2010, profit: 1000 }] },
+						{ name: "Software" , 
+						  sales: [	{ year:2005, profit: 1100 },
+									{ year:2006, profit: 1700 },
+									{ year:2007, profit: 1680 },
+									{ year:2008, profit: 4000 },
+									{ year:2009, profit: 4900 },
+									{ year:2010, profit: 700 }] }
+					 ];
+					
+   			//layout转换数据,转换成适合堆栈图的数据
+   			var stack = d3.layout.stack()
+   								.values(function(d){//获取或设置每个系列值的访问器函数
+   									return d.sales;
+   								}) 
+   								.x(function(d){//获取或设置x轴访问器函数
+   									return d.year;
+   								})	
+   								.y(function(d)//获取或设置y轴访问器函数
+   								{
+   									return d.profit;
+   								});
+   			var data =stack(dataset);
+   			
+   			console.log(data);//输出数据，可以查看到y0和y
+   		  		
+   		//x轴比例尺
+   			var xRange = width-padding.left-padding.right;
+   			//序列比例尺 (设置x轴上每个节点(年份)所显示的位置)
+   			var xScale =d3.scale.ordinal()
+   						  .domain(data[0].sales.map(function(d){ //设置比例尺的定义域  (在x轴要显示的数据)
+   						  	return d.year;
+   						  }))
+   						  // .rangeBands([0,xRange],0.3);//为离散的块划分值域,(设置图表适合页面的宽度，显示位置)	  0.3为每个step之间的padding
+								.rangeBands([0,xRange]);//为离散的块划分值域,(设置图表适合页面的宽度，显示位置)	  0.3为每个step之间的padding
+   			
+   		//Y轴比例尺
+			//获得定义域最大值  (data[data.length-1]是最上面那个矩形，位于最高层，所以他的sales中的y0+y是最大的)
+			var bigProfit = d3.max(data[data.length-1].sales,function(d)
+			{
+				return d.y+d.y0; //y0即该层起始坐标，y是高度
+			});
+			//获得值域最大值
+			var yRange =height-padding.top-padding.bottom;	
+   			//线性比例尺
+   			var yScale = d3.scale.linear()
+   							.domain([0,bigProfit])   //定义域
+   							.range([0,yRange]); //值域
+   		
+   		//颜色比例尺
+   		var color = d3.scale.category20();
+   		
+ 		//添加分组g标签 并设置颜色
+ 		var groupRect = svg.selectAll("g")
+ 							.data(data)
+ 							.enter()
+ 							.append("g")
+ 							.attr("fill",function(d,i)
+ 							{
+ 								return color(i);
+ 							});
+ 		
+ 		//添加矩形
+ 		var rects = groupRect.selectAll("rect")
+ 							.data(function(d)
+ 							{
+ 								return d.sales;
+ 							})
+ 							.enter()
+ 							.append("rect")
+ 							.attr("x",function(d,i){
+ 								return xScale(d.year); //x轴上坐标的位置
+ 							})
+ 							.attr("y",function(d,i){
+ 								return yRange-(yScale(d.y0+d.y));//Y轴上坐标的高度
+ 							})	
+ 							.attr("width",function(d,i)
+ 							{
+ 								return xScale.rangeBand(); //rangeBand()取得离散块的宽度，即x轴上各个矩形的宽度
+ 							})	
+ 							.attr("height",function(d,i)
+ 							{
+ 								return yScale(d.y); //y为矩形的高度
+ 							})
+ 							 //堆栈图偏移位置，即具体页面左边和顶部的位置
+ 							.attr("transform","translate("+padding.left+","+padding.top+")"); 
+ 								
+ 									
+   </script>
+    
+  </body>
+</html>
