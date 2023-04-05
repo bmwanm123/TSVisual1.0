@@ -19,7 +19,7 @@
 
 #### 交互流程展示(版本 1demo)
 
-![20220625153551](https://github.com/bmwanm123/TSVisual-System/blob/main/Visual-Analysis/static/image/TSSer1.0.gif)
+![20220625153551](https://github.com/bmwanm123/TSVisual1.0/blob/main/Visual-Analysis/static/image/TSSer1.0.gif)
 
 <!-- ROADMAP -->
 
@@ -29,4 +29,4 @@
 
 如有问题欢迎发送邮件 - zmingkun@csu.edu.cn
 
-Project Link: https://github.com/bmwanm123/TSVisual-System
+Project Link: https://github.com/bmwanm123/TSVisual1.0
